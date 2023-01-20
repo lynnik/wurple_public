@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="match_constraint">0dp</dimen>
+    <dimen name="elevation_min">0dp</dimen>
+
+    <dimen name="size_min">1dp</dimen>
+    <dimen name="size_x_small">4dp</dimen>
+    <dimen name="size_small">8dp</dimen>
+    <dimen name="size_medium">16dp</dimen>
+    <dimen name="size_large">24dp</dimen>
+    <dimen name="size_x_large">32dp</dimen>
+    <dimen name="size_xx_large">40dp</dimen>
+
+    <dimen name="list_item_small">48dp</dimen>
+    <dimen name="list_item_medium">56dp</dimen>
+
+    <!--alpha-->
+    <dimen name="alpha_secondary_text">.7</dimen>
+</resources>

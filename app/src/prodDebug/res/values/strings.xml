@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Wurple prodDebug</string>
+    <string name="leak_canary_display_activity_label">Wurple prodDebug leaks</string>
+</resources>

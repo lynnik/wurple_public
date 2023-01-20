@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_medium">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAppearance="?textAppearanceDisplaySmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem" />
+
+        <ImageView
+            android:id="@+id/qrCodeImageView"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/match_constraint"
+            android:layout_marginTop="@dimen/size_medium"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintWidth_percent=".5"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/qrCodeView"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/match_constraint"
+            android:background="@color/md_theme_onBackground"
+            app:layout_constraintBottom_toBottomOf="@id/qrCodeImageView"
+            app:layout_constraintEnd_toEndOf="@id/qrCodeImageView"
+            app:layout_constraintStart_toStartOf="@id/qrCodeImageView"
+            app:layout_constraintTop_toTopOf="@id/qrCodeImageView" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/qrCodeCircularProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:layout_constraintBottom_toBottomOf="@+id/qrCodeImageView"
+            app:layout_constraintEnd_toEndOf="@+id/qrCodeImageView"
+            app:layout_constraintStart_toStartOf="@+id/qrCodeImageView"
+            app:layout_constraintTop_toTopOf="@+id/qrCodeImageView" />
+
+        <TextView
+            android:id="@+id/deepLinkTextView"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_medium"
+            android:gravity="center_horizontal"
+            android:textAppearance="?textAppearanceLabelLarge"
+            android:textColor="?colorTertiary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/qrCodeImageView"
+            tools:text="@tools:sample/lorem" />
+
+        <Button
+            android:id="@+id/shareButton"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_medium"
+            android:layout_marginEnd="@dimen/size_small"
+            android:text="@string/common_share"
+            app:layout_constraintEnd_toStartOf="@id/copyButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deepLinkTextView" />
+
+        <Button
+            android:id="@+id/copyButton"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_small"
+            android:layout_marginTop="@dimen/size_medium"
+            android:text="@string/common_copy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/shareButton"
+            app:layout_constraintTop_toBottomOf="@id/deepLinkTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

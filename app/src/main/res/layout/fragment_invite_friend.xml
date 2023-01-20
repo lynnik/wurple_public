@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.flow.more.invitefriend.InviteFriendFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScroll="true"
+        app:liftOnScrollTargetViewId="@id/nestedScrollView">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@string/invite_friend_title"
+                app:titleCentered="true" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/mainProgressIndicator"
+                style="@style/LinearProgressIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/size_medium">
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginTop="@dimen/size_small"
+                android:text="@string/invite_friend_desc"
+                android:textAppearance="?textAppearanceBodyMedium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/deepLinkQrCodeImageView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                android:layout_marginTop="@dimen/size_medium"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+                app:layout_constraintWidth_percent=".5"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:id="@+id/deepLinkQrCodeView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                android:background="@color/md_theme_onBackground"
+                app:layout_constraintBottom_toBottomOf="@id/deepLinkQrCodeImageView"
+                app:layout_constraintEnd_toEndOf="@id/deepLinkQrCodeImageView"
+                app:layout_constraintStart_toStartOf="@id/deepLinkQrCodeImageView"
+                app:layout_constraintTop_toTopOf="@id/deepLinkQrCodeImageView" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/deepLinkQrCodeCircularProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                app:layout_constraintBottom_toBottomOf="@+id/deepLinkQrCodeImageView"
+                app:layout_constraintEnd_toEndOf="@+id/deepLinkQrCodeImageView"
+                app:layout_constraintStart_toStartOf="@+id/deepLinkQrCodeImageView"
+                app:layout_constraintTop_toTopOf="@+id/deepLinkQrCodeImageView" />
+
+            <TextView
+                android:id="@+id/deepLinkTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginTop="@dimen/size_medium"
+                android:gravity="center_horizontal"
+                android:textAppearance="?textAppearanceLabelLarge"
+                android:textColor="?colorTertiary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/deepLinkQrCodeImageView"
+                tools:text="@tools:sample/lorem" />
+
+            <Button
+                android:id="@+id/shareButton"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_medium"
+                android:layout_marginTop="@dimen/size_medium"
+                android:layout_marginEnd="@dimen/size_small"
+                android:text="@string/common_share"
+                app:layout_constraintEnd_toStartOf="@id/copyButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/deepLinkTextView" />
+
+            <Button
+                android:id="@+id/copyButton"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_small"
+                android:layout_marginTop="@dimen/size_medium"
+                android:layout_marginEnd="@dimen/size_medium"
+                android:text="@string/common_copy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/shareButton"
+                app:layout_constraintTop_toBottomOf="@id/deepLinkTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,9 @@
+ext {
+    sdkVersion = 33
+    minSdkVersion = 28
+
+    appMajorVersion = 1
+    appMinorVersion = 1
+    appPatchVersion = 1
+    appBuildVersion = 10
+}

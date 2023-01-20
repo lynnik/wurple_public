@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/md_theme_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+
+        <item name="android:statusBarColor">@color/systemBars</item>
+        <item name="android:navigationBarColor">@color/systemBars</item>
+
+        <item name="android:windowLightStatusBar">@bool/windowLightStatusBar</item>
+        <item name="android:windowLightNavigationBar">@bool/windowLightStatusBar</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/md_theme_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/md_theme_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_onTertiaryContainer</item>
+        <item name="colorError">@color/md_theme_error</item>
+        <item name="colorErrorContainer">@color/md_theme_errorContainer</item>
+        <item name="colorOnError">@color/md_theme_onError</item>
+        <item name="colorOnErrorContainer">@color/md_theme_onErrorContainer</item>
+        <item name="android:colorBackground">@color/md_theme_background</item>
+        <item name="colorOnBackground">@color/md_theme_onBackground</item>
+        <item name="colorSurface">@color/md_theme_surface</item>
+        <item name="colorOnSurface">@color/md_theme_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_onSurfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_outline</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/md_theme_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_primaryInverse</item>
+
+        <item name="textAppearanceDisplayLarge">@style/DisplayLarge</item>
+        <item name="textAppearanceDisplayMedium">@style/DisplayMedium</item>
+        <item name="textAppearanceDisplaySmall">@style/DisplaySmall</item>
+        <item name="textAppearanceHeadlineLarge">@style/HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/HeadlineSmall</item>
+        <item name="textAppearanceTitleLarge">@style/TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TitleSmall</item>
+        <item name="textAppearanceBodyLarge">@style/BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/BodySmall</item>
+        <item name="textAppearanceLabelLarge">@style/LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/LabelSmall</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/LargeComponent</item>
+    </style>
+
+    <style name="BaseTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/systemBars</item>
+        <item name="android:navigationBarColor">@color/systemBars</item>
+
+        <item name="android:windowLightStatusBar">@bool/windowLightStatusBar</item>
+        <item name="android:windowLightNavigationBar">@bool/windowLightStatusBar</item>
+    </style>
+</resources>

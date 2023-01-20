@@ -1,0 +1,171 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    def config = rootProject.ext
+    compileSdk config.sdkVersion
+    defaultConfig {
+        applicationId "com.wurple"
+        minSdk config.minSdkVersion
+        targetSdk config.sdkVersion
+        versionCode config.appBuildVersion
+        versionName "${config.appMajorVersion}.${config.appMinorVersion}.${config.appPatchVersion}.${config.appBuildVersion}"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        def keystorePropertiesFile = rootProject.file("keystore.properties")
+        def keystoreProperties = new Properties()
+        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+        release {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions += "version"
+    productFlavors {
+        def scheme = "https"
+        // deep link path
+        def pathSignIn = "sign-in"
+        def pathDeleteAccount = "delete-account"
+        def pathEditProfileEmail = "edit-profile-email"
+        def pathPreview = "preview"
+        def pathInviteFriend = "invite-friend"
+        dev {
+            dimension = "version"
+            def domain = "wurpledev.page.link"
+            def signInDomain = domain
+            def pathDeepLink = ""
+            // build config fields
+            buildConfigField("String", "SCHEME", "\"${scheme}\"")
+            buildConfigField("String", "DOMAIN", "\"${domain}\"")
+            buildConfigField("String", "SIGN_IN_DOMAIN", "\"${signInDomain}\"")
+            buildConfigField("String", "PATH_SIGN_IN", "\"${pathSignIn}\"")
+            buildConfigField("String", "PATH_DELETE_ACCOUNT", "\"${pathDeleteAccount}\"")
+            buildConfigField("String", "PATH_EDIT_PROFILE_EMAIL", "\"${pathEditProfileEmail}\"")
+            buildConfigField("String", "PATH_PREVIEW", "\"${pathPreview}\"")
+            buildConfigField("String", "PATH_INVITE_FRIEND", "\"${pathInviteFriend}\"")
+            buildConfigField("String", "PATH_DEEP_LINK", "\"${pathDeepLink}\"")
+            // manifest placeholders
+            manifestPlaceholders = [
+                    scheme      : scheme,
+                    domain      : domain,
+                    signInDomain: signInDomain,
+                    pathDeepLink: pathDeepLink,
+                    placesApiKey: "key"
+            ]
+            // suffix
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+        }
+        prod {
+            dimension = "version"
+            def domain = "wurple.app"
+            def signInDomain = "wurple.page.link"
+            def pathDeepLink = "link"
+            // build config fields
+            buildConfigField("String", "SCHEME", "\"${scheme}\"")
+            buildConfigField("String", "DOMAIN", "\"${domain}\"")
+            buildConfigField("String", "SIGN_IN_DOMAIN", "\"${signInDomain}\"")
+            buildConfigField("String", "PATH_SIGN_IN", "\"${pathSignIn}\"")
+            buildConfigField("String", "PATH_DELETE_ACCOUNT", "\"${pathDeleteAccount}\"")
+            buildConfigField("String", "PATH_EDIT_PROFILE_EMAIL", "\"${pathEditProfileEmail}\"")
+            buildConfigField("String", "PATH_PREVIEW", "\"${pathPreview}\"")
+            buildConfigField("String", "PATH_INVITE_FRIEND", "\"${pathInviteFriend}\"")
+            buildConfigField("String", "PATH_DEEP_LINK", "\"${pathDeepLink}\"")
+            // manifest placeholders
+            manifestPlaceholders = [
+                    scheme      : scheme,
+                    domain      : domain,
+                    signInDomain: signInDomain,
+                    pathDeepLink: pathDeepLink,
+                    placesApiKey: "key"
+            ]
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    def dependencies = rootProject.ext.dependencies
+    // Kotlin
+    implementation dependencies.kotlinCoroutinesAndroid
+    implementation dependencies.kotlinCoroutinesPlayServices
+    // DI
+    implementation dependencies.koinAndroid
+    // Android
+    implementation dependencies.coreKtx
+    implementation dependencies.lifecycleViewmodelKtx
+    implementation dependencies.fragmentKtx
+    implementation dependencies.datastorePreferences
+    // Android UI
+    implementation dependencies.material
+    implementation dependencies.appcompat
+    implementation dependencies.constraintLayout
+    implementation dependencies.swiperefreshlayout
+    implementation dependencies.splashscreen
+    implementation dependencies.browser
+    // Coil (image loader)
+    implementation dependencies.coil
+    // uCrop (image cropping)
+    implementation dependencies.uCrop
+    // Zxing (QR-code generator)
+    implementation dependencies.zxing
+    // View binding delegate
+    implementation dependencies.viewBindingDelegate
+    // Room (database)
+    implementation dependencies.room
+    kapt dependencies.roomCompiler
+    implementation dependencies.roomKtx
+    // Google
+    implementation dependencies.playServicesAuth
+    // Google Places
+    implementation dependencies.googlePlaces
+    // Firebase
+    implementation platform(dependencies.firebaseBom)
+    implementation dependencies.firebaseAnalyticsKtx
+    implementation dependencies.firebaseCrashlyticsKtx
+    implementation dependencies.firebaseDynamicLinksKtx
+    implementation dependencies.firebaseAuthKtx
+    implementation dependencies.firebaseFirestoreKtx
+    implementation dependencies.firebaseStorageKtx
+    implementation dependencies.firebaseFunctionsKtx
+    // Gson
+    implementation dependencies.gson
+    // Logging
+    implementation dependencies.timber
+    // Leakcanary
+    debugImplementation dependencies.leakcanary
+    // Test
+    implementation dependencies.junit
+    implementation dependencies.testJunit
+    implementation dependencies.espressoCore
+}

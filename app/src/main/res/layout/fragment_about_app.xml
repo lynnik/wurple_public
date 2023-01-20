@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.flow.more.aboutapp.AboutAppFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScroll="true"
+        app:liftOnScrollTargetViewId="@id/nestedScrollView">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/about_app_title"
+            app:titleCentered="true" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/appImageView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                android:layout_marginTop="@dimen/size_small"
+                android:src="@drawable/ic_splash"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".3"
+                app:shapeAppearance="?shapeAppearanceLargeComponent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/appNameTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginTop="@dimen/size_small"
+                android:gravity="center_horizontal"
+                android:text="@string/app_name"
+                android:textAppearance="?textAppearanceDisplaySmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appImageView" />
+
+            <TextView
+                android:id="@+id/appDescriptionTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginTop="@dimen/size_small"
+                android:gravity="center_horizontal"
+                android:text="@string/about_app_description"
+                android:textAppearance="?textAppearanceBodyMedium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appNameTextView" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/appMaterialCardView"
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginTop="@dimen/size_x_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appDescriptionTextView"
+                app:shapeAppearance="?shapeAppearanceLargeComponent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/onboardingTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/size_medium"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="@dimen/size_medium"
+                        android:text="@string/about_onboarding"
+                        android:textAppearance="?textAppearanceTitleMedium"
+                        app:drawableStartCompat="@drawable/ic_stairs" />
+
+                    <TextView
+                        android:id="@+id/rateAppTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/size_medium"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="@dimen/size_medium"
+                        android:text="@string/about_app_rate"
+                        android:textAppearance="?textAppearanceTitleMedium"
+                        app:drawableStartCompat="@drawable/ic_thumb_up" />
+
+                    <TextView
+                        android:id="@+id/privacyPolicyTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/size_medium"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="@dimen/size_medium"
+                        android:text="@string/about_app_privacy_policy"
+                        android:textAppearance="?textAppearanceTitleMedium"
+                        app:drawableStartCompat="@drawable/ic_policy" />
+
+                    <!--TODO use it when terms will be created-->
+                    <!--<TextView
+                        android:id="@+id/termsAndConditionsTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/size_medium"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="@dimen/size_medium"
+                        android:text="@string/about_app_t_and_c"
+                        android:textAppearance="?textAppearanceTitleMedium"
+                        app:drawableStartCompat="@drawable/ic_description" />-->
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/appVersionTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginTop="@dimen/size_x_large"
+                android:gravity="center_horizontal"
+                android:textAppearance="?textAppearanceLabelLarge"
+                android:textColor="?colorTertiary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appMaterialCardView"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/appPackageNameTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginTop="@dimen/size_small"
+                android:gravity="center_horizontal"
+                android:textAppearance="?textAppearanceLabelLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appVersionTextView"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/madeInUkraineTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginVertical="@dimen/size_x_large"
+                android:drawablePadding="@dimen/size_small"
+                android:gravity="center_horizontal"
+                android:text="@string/about_app_made_in_ukraine"
+                android:textAppearance="?textAppearanceTitleMedium"
+                app:drawableEndCompat="@drawable/ic_ua"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appPackageNameTextView"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

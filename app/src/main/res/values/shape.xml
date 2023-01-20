@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Chips, buttons, text fields and FABs-->
+    <style name="SmallComponent" parent="ShapeAppearance.Material3.SmallComponent" />
+
+    <!--Cards, alert dialogs-->
+    <style name="MediumComponent" parent="ShapeAppearance.Material3.MediumComponent" />
+
+    <!--Side and bottom navigation drawers-->
+    <style name="LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/size_medium</item>
+    </style>
+</resources>

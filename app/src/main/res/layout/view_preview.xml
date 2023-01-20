@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--PrimaryInfo-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/primaryInfoMaterialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shapeAppearance="?shapeAppearanceLargeComponent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/size_small">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userImageImageView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                android:background="@drawable/image_user"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="?shapeAppearanceLargeComponent"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/userImageMaterialCardView"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                android:layout_margin="@dimen/size_small"
+                app:layout_constraintBottom_toBottomOf="@id/userImageImageView"
+                app:layout_constraintEnd_toEndOf="@id/userImageImageView"
+                app:layout_constraintStart_toStartOf="@id/userImageImageView"
+                app:layout_constraintTop_toTopOf="@id/userImageImageView"
+                app:shapeAppearance="?shapeAppearanceLargeComponent" />
+
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_small"
+                android:layout_marginTop="@dimen/size_small"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/size_small"
+                android:textAppearance="?attr/textAppearanceDisplaySmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userImageImageView"
+                tools:text="@tools:sample/full_names" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/userNameMaterialCardView"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                app:layout_constraintBottom_toBottomOf="@id/userNameTextView"
+                app:layout_constraintEnd_toEndOf="@id/userNameTextView"
+                app:layout_constraintStart_toStartOf="@id/userNameTextView"
+                app:layout_constraintTop_toTopOf="@id/userNameTextView"
+                app:shapeAppearance="?shapeAppearanceLargeComponent" />
+
+            <TextView
+                android:id="@+id/userPositionTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_small"
+                android:layout_marginTop="@dimen/size_small"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="@dimen/size_small"
+                android:paddingTop="@dimen/size_small"
+                android:textAppearance="?textAppearanceBodyLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userNameTextView"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/companyNameTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginTop="@dimen/size_x_small"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="@dimen/size_small"
+                android:textAppearance="?textAppearanceBodyLarge"
+                android:textColor="?colorTertiary"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userPositionTextView"
+                tools:text="@tools:sample/lorem"
+                tools:visibility="visible" />
+
+            <Space
+                android:id="@+id/companyNameSpace"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/size_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/companyNameTextView" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/userPositionMaterialCardView"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                app:layout_constraintBottom_toBottomOf="@id/companyNameSpace"
+                app:layout_constraintEnd_toEndOf="@id/userPositionTextView"
+                app:layout_constraintStart_toStartOf="@id/userPositionTextView"
+                app:layout_constraintTop_toTopOf="@id/userPositionTextView"
+                app:shapeAppearance="?shapeAppearanceLargeComponent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--SecondaryInfo-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/secondaryInfoMaterialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_medium"
+        app:shapeAppearance="?shapeAppearanceLargeComponent">
+
+        <LinearLayout
+            android:id="@+id/secondaryInfoLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/size_small" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--Skills-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/skillsContainerMaterialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_medium"
+        android:visibility="gone"
+        app:shapeAppearance="?shapeAppearanceLargeComponent"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginVertical="@dimen/size_medium"
+                android:text="@string/skills_title"
+                android:textAppearance="?textAppearanceHeadlineSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/skillsContainerLinearLayout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_medium"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView"
+                tools:ignore="UselessLeaf">
+
+                <TextView
+                    android:id="@+id/personalSkillsTitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size_medium"
+                    android:layout_marginTop="@dimen/size_medium"
+                    android:text="@string/skills_personal"
+                    android:textAppearance="?textAppearanceTitleMedium"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/personalSkillsChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size_medium"
+                    android:layout_marginTop="@dimen/size_small"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/professionalSkillsTitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size_medium"
+                    android:layout_marginTop="@dimen/size_medium"
+                    android:text="@string/skills_professional"
+                    android:textAppearance="?textAppearanceTitleMedium"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/professionalSkillsChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size_medium"
+                    android:layout_marginTop="@dimen/size_small"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/skillsContainerLinearLayout" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/skillsMaterialCardView"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                android:layout_margin="@dimen/size_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="?shapeAppearanceLargeComponent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--Experience-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/experienceContainerMaterialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_medium"
+        android:visibility="gone"
+        app:shapeAppearance="?shapeAppearanceLargeComponent"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/experienceTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginVertical="@dimen/size_medium"
+                android:text="@string/experience_title"
+                android:textAppearance="?textAppearanceHeadlineSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/experienceContainerLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_small"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/experienceTextView"
+                tools:ignore="UselessLeaf" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/experienceContainerLinearLayout" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/experienceMaterialCardView"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                android:layout_margin="@dimen/size_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="?shapeAppearanceLargeComponent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--Education-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/educationContainerMaterialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_medium"
+        android:visibility="gone"
+        app:shapeAppearance="?shapeAppearanceLargeComponent"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/educationTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginVertical="@dimen/size_medium"
+                android:text="@string/education_title"
+                android:textAppearance="?textAppearanceHeadlineSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/educationContainerLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/size_small"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/educationTextView"
+                tools:ignore="UselessLeaf" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/educationContainerLinearLayout" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/educationMaterialCardView"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                android:layout_margin="@dimen/size_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="?shapeAppearanceLargeComponent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--Languages-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/languagesContainerMaterialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_medium"
+        android:visibility="gone"
+        app:shapeAppearance="?shapeAppearanceLargeComponent"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/languagesTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_medium"
+                android:layout_marginVertical="@dimen/size_medium"
+                android:text="@string/languages_title"
+                android:textAppearance="?textAppearanceHeadlineSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/languagesContainerLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/size_small"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/languagesTextView"
+                tools:ignore="UselessLeaf" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/languagesContainerLinearLayout" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/languagesMaterialCardView"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/match_constraint"
+                android:layout_margin="@dimen/size_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="?shapeAppearanceLargeComponent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

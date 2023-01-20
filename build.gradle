@@ -1,0 +1,19 @@
+buildscript {
+    apply from: 'config.gradle'
+    apply from: 'dependencies.gradle'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        def dependencies = rootProject.ext.dependencies
+        classpath dependencies.gradle
+        classpath dependencies.kotlinGradlePlugin
+        classpath dependencies.googleServices
+        classpath dependencies.firebaseCrashlyticsGradle
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

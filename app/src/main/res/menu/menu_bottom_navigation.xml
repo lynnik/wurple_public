@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemYou"
+        android:enabled="true"
+        android:icon="@drawable/ic_person"
+        android:title="@string/main_you" />
+    <item
+        android:id="@+id/itemPreviews"
+        android:enabled="true"
+        android:icon="@drawable/ic_preview"
+        android:title="@string/main_previews" />
+    <item
+        android:id="@+id/itemMore"
+        android:enabled="true"
+        android:icon="@drawable/ic_more_horiz"
+        android:title="@string/main_more" />
+</menu>

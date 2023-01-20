@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.flow.auth.signinemailverification.SignInEmailVerificationFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.Material3.Toolbar.Surface"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_sign_in_email_verification"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/sign_in_email_verification_verify_email"
+        app:titleCentered="true" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/mainProgressIndicator"
+        style="@style/LinearProgressIndicator"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_medium"
+        android:layout_marginTop="@dimen/size_small"
+        android:textAppearance="?textAppearanceBodyMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:text="@string/sign_in_email_verification_sent" />
+
+    <TextView
+        android:id="@+id/resendTextView"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_medium"
+        android:layout_marginTop="@dimen/size_medium"
+        android:gravity="center_horizontal"
+        android:textAppearance="?textAppearanceBodyMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+        tools:text="@string/sign_in_email_verification_resend_timer" />
+
+    <Button
+        android:id="@+id/resendButton"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_medium"
+        android:layout_marginTop="@dimen/size_medium"
+        android:text="@string/sign_in_email_verification_resend"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resendTextView"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/changeEmailButton"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_medium"
+        android:text="@string/sign_in_email_verification_change_email"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resendButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

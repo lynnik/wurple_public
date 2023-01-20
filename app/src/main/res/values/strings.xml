@@ -1,0 +1,319 @@
+<resources>
+    <string name="app_name">Wurple</string>
+    <string name="sauropod">🦕</string>
+
+    <!--SignIn-->
+    <string name="sign_in_welcome">Welcome to %1$s!</string>
+    <string name="sign_in_description">All you need to sign-in is your email address 😉</string>
+    <string name="sign_in_email_placeholder">Email</string>
+    <string name="sign_in_email_leading_icon">Clear email</string>
+    <string name="sign_in_agreements">I agree to the Privacy Policy</string>
+
+    <!--SignInEmailVerification-->
+    <string name="sign_in_email_verification_verify_email">Verify your email</string>
+    <!--We have just sent sign-in link to lynnik@wurple.com-->
+    <string name="sign_in_email_verification_sent">We have just sent sign-in link to %1$s</string>
+    <!--Resend in 59s-->
+    <string name="sign_in_email_verification_resend_timer">Resend in %1$ds</string>
+    <string name="sign_in_email_verification_resend">Resend sign-in link</string>
+    <string name="sign_in_email_verification_change_email">Change email</string>
+
+    <!--Main-->
+    <string name="main_you">You</string>
+    <string name="main_previews">Previews</string>
+    <string name="main_more">More</string>
+
+    <!--You-->
+    <!--at Wurple-->
+    <string name="you_company">at %1$s</string>
+    <string name="fill_out_your_profile">Fill out your profile</string>
+
+    <!--Edit profile-->
+    <string name="edit_profile_title">Edit profile</string>
+    <string name="edit_profile_image_title">Edit your image</string>
+    <string name="edit_profile_image_choose">Choose image</string>
+    <string name="edit_profile_image_delete">Delete image</string>
+    <string name="edit_profile_image_delete_are_you_sure">Are you sure you want to delete your image?</string>
+    <string name="edit_profile_image_read_external_storage_permissions_rationals_message">
+        In order to add an image we need access to your photos, media and files on your device
+    </string>
+    <string name="edit_profile_image_read_external_storage_permissions_settings_message">
+        In order to add an image we need access to your photos, media and files on your device. Go to settings to enable the permissions
+    </string>
+    <string name="edit_profile_full_name">Full name</string>
+    <string name="edit_profile_name_title">Edit your name</string>
+    <string name="edit_profile_name_first_name_hint">First name</string>
+    <string name="edit_profile_name_first_name_stub">Anonymous</string>
+    <string name="edit_profile_name_last_name_hint">Last name</string>
+    <string name="edit_profile_name_last_name_stub">Person</string>
+    <string name="edit_profile_dob_title">Edit your date of birth</string>
+    <string name="edit_profile_dob">Date of birth</string>
+    <string name="edit_profile_dob_stub">Enter your date of birth</string>
+    <string name="edit_profile_location">Location</string>
+    <string name="edit_profile_location_title">Edit your location</string>
+    <string name="edit_profile_location_stub">Set your work location</string>
+    <string name="edit_profile_email">Email</string>
+    <string name="edit_profile_email_title">Edit your email</string>
+    <string name="edit_profile_email_verify_email">This operation is sensitive and requires recent authentication. We will send you sign-in link to verify your account</string>
+    <string name="edit_profile_username">Username</string>
+    <string name="edit_profile_username_title">Edit your username</string>
+    <string name="edit_profile_username_hint">Username</string>
+    <!--Minimum length is 5 characters. You can use a–z, 0–9 and underscores-->
+    <string name="edit_profile_username_helper">Minimum length is %1$d characters. You can use a–z, 0–9 and underscores</string>
+    <string name="edit_profile_username_stub">Create a username</string>
+    <string name="edit_profile_bio">Bio</string>
+    <string name="edit_profile_bio_title">Edit your bio</string>
+    <string name="edit_profile_bio_stub">Add a few words about yourself</string>
+
+    <!--Skills-->
+    <string name="skills_title">Skills</string>
+    <string name="skills_personal">Personal</string>
+    <string name="skills_professional">Professional</string>
+    <string name="skills_empty_state_title">No skills found</string>
+    <string name="skills_add_skill">Skill</string>
+    <string name="skills_add_description">Enter the skills you have (separated by commas), for example, Emotional Intelligence as a Personal skill or MS Word as a Professional one</string>
+    <string name="skills_add_skill_type">Skill type</string>
+    <string name="skills_add_title">Add skill</string>
+    <string name="skills_add_edit_title">Edit skill</string>
+    <string name="skills_add_skill_already_added_error">\"%1$s\" skill has already been added</string>
+    <string name="skills_delete">Delete skill</string>
+    <string name="skills_delete_are_you_sure">Are you sure you want to delete your skill?</string>
+    <string name="skills_personal_error_can_not_create_more_than">You can not create more than %1$d personal skills items</string>
+    <string name="skills_professional_error_can_not_create_more_than">You can not create more than %1$d professional skills items</string>
+
+    <!--Experience-->
+    <string name="experience_title">Experience</string>
+    <string name="experience_empty_state_title">No experience found</string>
+    <string name="experience_date">%1$s - %2$s</string>
+    <string name="experience_date_range">%1$s - %2$s (%3$s)</string>
+    <string name="experience_date_range_months_and_years">%1$s %2$s</string>
+    <plurals name="experience_date_months">
+        <item quantity="one">%1$d mo</item>
+        <item quantity="other">%1$d mos</item>
+    </plurals>
+    <plurals name="experience_date_years">
+        <item quantity="one">%1$d yr</item>
+        <item quantity="other">%1$d yrs</item>
+    </plurals>
+    <string name="experience_add_title">Add experience</string>
+    <string name="experience_add_edit_title">Edit experience</string>
+    <string name="experience_add_position_hint">Position</string>
+    <string name="experience_add_company_name_hint">Company name</string>
+    <string name="experience_add_date_from_hint">From</string>
+    <string name="experience_add_date_to_hint">To</string>
+    <string name="experience_add_is_current_hint">I currently work here</string>
+    <string name="experience_delete">Delete experience</string>
+    <string name="experience_delete_are_you_sure">Are you sure you want to delete your experience?</string>
+    <string name="experience_error_can_not_create_more_than">You can not create more than %1$d experience items</string>
+
+    <!--Education-->
+    <string name="education_title">Education</string>
+    <string name="education_empty_state_title">No education found</string>
+    <string name="education_add_title">Add education</string>
+    <string name="education_add_edit_title">Edit education</string>
+    <string name="education_add_degree_hint">Degree</string>
+    <string name="education_add_institution_hint">Institution</string>
+    <string name="education_add_date_graduation_hint">Graduation</string>
+    <string name="education_delete">Delete education</string>
+    <string name="education_delete_are_you_sure">Are you sure you want to delete your education?</string>
+    <string name="education_error_can_not_create_more_than">You can not create more than %1$d education items</string>
+
+    <!--Languages-->
+    <string name="languages_title">Languages</string>
+    <string name="languages_empty_state_title">No languages found</string>
+    <string name="languages_add_title">Add language</string>
+    <string name="languages_add_edit_title">Edit language</string>
+    <string name="languages_add_language">Language</string>
+    <string name="languages_add_languages_level">Level</string>
+    <string name="languages_add_languages_already_added_error">Language with this level has already been added</string>
+    <string name="languages_delete">Delete language</string>
+    <string name="languages_delete_are_you_sure">Are you sure you want to delete your language?</string>
+    <string name="languages_error_can_not_create_more_than">You can not create more than %1$d language items</string>
+    <string name="languages_level_0">No Proficiency</string>
+    <string name="languages_level_1">Elementary Proficiency</string>
+    <string name="languages_level_2">Limited Working Proficiency</string>
+    <string name="languages_level_3">Professional Working Proficiency</string>
+    <string name="languages_level_4">Full Professional Proficiency</string>
+    <string name="languages_level_5">Native / Bilingual Proficiency</string>
+    <string name="languages_language_english">English</string>
+    <string name="languages_language_chinese">Chinese</string>
+    <string name="languages_language_spanish">Spanish</string>
+    <string name="languages_language_arabic">Arabic</string>
+    <string name="languages_language_japanese">Japanese</string>
+    <string name="languages_language_hindustani">Hindustani</string>
+    <string name="languages_language_french">French</string>
+    <string name="languages_language_german">German</string>
+    <string name="languages_language_russian">Russian</string>
+    <string name="languages_language_portuguese">Portuguese</string>
+    <string name="languages_language_italian">Italian</string>
+    <string name="languages_language_ukrainian">Ukrainian</string>
+
+    <!--Location-->
+    <string name="location_empty_state_title">No location found</string>
+    <string name="location_query_hint">Search</string>
+    <string name="location_incorrect">Incorrect location</string>
+
+    <!--Account-->
+    <string name="account_title">Account</string>
+    <string name="account_edit_email">Edit email</string>
+    <string name="account_sign_out">Sign out</string>
+    <string name="account_sign_out_are_you_sure">Are you sure you want to sign out?</string>
+    <string name="account_delete_account">Delete account</string>
+    <string name="delete_account_first_check">Permanently delete all data</string>
+    <string name="delete_account_verify">Verify account deletion</string>
+    <string name="delete_account_are_you_sure">Are you sure you want to delete your account?</string>
+
+    <!--Support-->
+    <string name="support_email">Email</string>
+    <string name="support_email_subject">%1$s support</string>
+    <string name="support_telegram">Telegram</string>
+
+    <!--In-app purchases-->
+    <string name="in_app_purchases_title">In-app purchases</string>
+
+    <!--Invite a friend-->
+    <string name="invite_friend_title">Invite a friend</string>
+    <string name="invite_friend_desc">Scan QR code, share app via popular social networks or just copy an invitation link to invite a friend 🤠</string>
+
+    <!--Settings-->
+    <string name="settings_title">Settings</string>
+
+    <!--About the app-->
+    <string name="about_app_title">About app</string>
+    <string name="about_app_description">The professional achievements storage</string>
+    <string name="about_onboarding">Onboarding</string>
+    <string name="about_app_rate">Rate app</string>
+    <string name="about_app_privacy_policy">Privacy Policy</string>
+    <string name="about_app_t_and_c">Terms and Conditions</string>
+    <string name="about_app_made_in_ukraine">Made in Ukraine</string>
+
+    <!--Onboarding-->
+    <string name="onboarding_title">Onboarding</string>
+    <string name="onboarding_page1_title">Complete Profile once</string>
+    <string name="onboarding_page1_desc">Photo, name, experience, etc.</string>
+    <string name="onboarding_page2_title">Create a Preview</string>
+    <string name="onboarding_page2_desc">Set up an expiration date.Manage the profile\'s data visibility (visible, anonymous, custom). Or delete it whenever you want.</string>
+    <string name="onboarding_page3_title">Share Previews by web links</string>
+    <string name="onboarding_page3_desc">With friends, colleagues, or employers.</string>
+
+    <!--Previews-->
+    <string name="previews_empty_state_title">No previews found</string>
+    <string name="previews_add_title">Add Preview</string>
+    <string name="previews_add_edit_title">Edit Preview</string>
+    <!--Available until Dec 2, 1993-->
+    <plurals name="previews_add_available_days">
+        <item quantity="one">Available until %1$s (%2$d day)</item>
+        <item quantity="other">Available until %1$s (%2$d days)</item>
+    </plurals>
+    <string name="previews_add_expired">Expired</string>
+    <string name="previews_add_title_hint">Title</string>
+    <!--Preview (some random string)-->
+    <string name="previews_add_title_auto_generated">Preview (%1$s)</string>
+    <string name="previews_add_title_helper">Visible only to you. Write clearly for whom it is intended, for example, \"For John Doe\" or \"For Company\"</string>
+    <string name="previews_add_exp_title">Choose lifetime</string>
+    <string name="previews_add_exp_1">1 day</string>
+    <string name="previews_add_exp_2">3 days</string>
+    <string name="previews_add_exp_3">1 week</string>
+    <string name="previews_add_exp_4">2 weeks</string>
+    <string name="previews_add_exp_5">1 month</string>
+    <string name="previews_add_exp_6">3 months</string>
+    <string name="previews_add_option_title">Choose visibility option</string>
+    <string name="previews_add_option_visible">Visible</string>
+    <string name="previews_add_option_anonymous">Anonymous</string>
+    <string name="previews_add_option_value_visible">Visible</string>
+    <string name="previews_add_option_value_partially_visible">Partially visible</string>
+    <string name="previews_add_option_value_hidden">Hidden</string>
+    <string name="previews_add_image">Image</string>
+    <string name="previews_add_user_name_hidden">Your name is hidden</string>
+    <string name="previews_add_current_position">Current position</string>
+    <string name="previews_add_current_position_hidden">Current position is hidden</string>
+    <string name="previews_add_experience_company_names_are_hidden">Company names are hidden</string>
+    <string name="previews_add_education_institution_names_are_hidden">Institution names are hidden</string>
+    <string name="previews_add_delete">Delete Preview</string>
+    <string name="previews_add_delete_are_you_sure">Are you sure you want to delete your Preview?</string>
+    <string name="previews_card_image">Image</string>
+    <string name="previews_card_name">Name</string>
+    <string name="previews_card_current_experience">Current experience</string>
+    <string name="previews_card_location">Location</string>
+    <string name="previews_card_email">Email</string>
+    <string name="previews_card_username">Username</string>
+    <string name="previews_card_bio">Bio</string>
+    <string name="previews_card_skills">Skills</string>
+    <string name="previews_card_experience">Experience</string>
+    <string name="previews_card_education">Education</string>
+    <string name="previews_card_languages">Languages</string>
+
+    <!--Preview-->
+    <string name="preview_title">Preview</string>
+    <string name="preview_empty_state_removed">Preview is not found. Seems like it was removed</string>
+    <string name="preview_empty_state_expired">Preview is expired</string>
+    <string name="preview_temp_desc">This is what your Preview will look like</string>
+
+    <!--Share Preview-->
+    <string name="share_preview_title">Share Preview</string>
+
+    <!--Common-->
+    <string name="common_copy">Copy</string>
+    <string name="common_copied">Copied 🎉</string>
+    <string name="common_continue">Continue</string>
+    <string name="common_save">Save</string>
+    <string name="common_update">Update</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_edit">Edit</string>
+    <string name="common_accept">Accept</string>
+    <string name="common_decline">Decline</string>
+    <string name="common_share">Share</string>
+    <string name="common_add">Add</string>
+    <string name="common_view">View</string>
+    <string name="common_hidden">Hidden</string>
+    <string name="common_support">Support</string>
+    <string name="common_date_format">mm/yyyy</string>
+    <string name="common_date_present">Present</string>
+    <!--Vlad Lynnik-->
+    <string name="common_user_full_name">%1$s %2$s</string>
+    <!--Owner, Wurple-->
+    <string name="common_experience_title">%1$s at %2$s</string>
+    <string name="common_username_prefix">\@</string>
+    <string name="common_username_with_prefix">\@%1$s</string>
+    <string name="common_username_already_exists">This username is already in use</string>
+
+    <!--Deep link-->
+    <!--Invite friend - Wurple-->
+    <string name="deep_link_invite_friend_title">You\'ve invited to - %1$s</string>
+    <!--Preview - Wurple-->
+    <string name="deep_link_preview_title">Preview - %1$s</string>
+
+    <!--Validation-->
+    <string name="input_validation_error_empty_email">Email cannot be empty</string>
+    <string name="input_validation_error_incorrect_email">Incorrect email format</string>
+    <string name="input_validation_error_empty_first_name">First name cannot be empty</string>
+    <string name="input_validation_error_empty_last_name">Last name cannot be empty</string>
+    <string name="input_validation_error_empty_default_date">Date cannot be empty</string>
+    <string name="input_validation_error_date_in_the_future">Date cannot be in the future</string>
+    <string name="input_validation_error_incorrect_default_date">Incorrect date format</string>
+    <!--Age must be between 16 and 100 years old-->
+    <string name="input_validation_error_incorrect_age">Age must be between %1$d and %2$d years old</string>
+    <string name="input_validation_error_incorrect_username">Incorrect username format</string>
+    <!--Username must be between 5 and 32 symbols-->
+    <string name="input_validation_error_incorrect_username_length">Username must be between %1$d and %2$d symbols</string>
+    <string name="input_validation_error_empty_skill">Skill cannot be empty</string>
+    <!--The maximum length exceeds 24 characters for the \"Some\" skill-->
+    <string name="input_validation_error_max_length_skill">The maximum length exceeds %1$d characters for the \"%2$s\" skill</string>
+    <string name="input_validation_error_empty_position">Position cannot be empty</string>
+    <string name="input_validation_error_empty_company_name">Company name cannot be empty</string>
+    <string name="input_validation_error_position_date_to_less_than_from">The To date must be more than the From one</string>
+    <string name="input_validation_error_empty_degree">Degree cannot be empty</string>
+    <string name="input_validation_error_empty_institution">Institution cannot be empty</string>
+    <string name="input_validation_error_empty_preview_title">Preview title cannot be empty</string>
+
+    <!--Error-->
+    <string name="error_unexpected">An unexpected error occurred. Please try again</string>
+    <string name="error_there_is_no_email_app">There is no application to send an email</string>
+    <string name="error_there_is_no_website_app">There is no application to open a website</string>
+    <string name="error_there_is_no_share_text_app">There is no application to share a text</string>
+    <string name="error_there_is_no_telegram_app">There is no Telegram application to send a message</string>
+
+    <!--Data-->
+    <!--Dnipro, Ukraine-->
+    <string name="data_user_formatted_location">%1$s, %2$s</string>
+</resources>
